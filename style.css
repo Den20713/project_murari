@@ -17,18 +17,11 @@ header{
     border: 1px solid white;
 }
 
-.logo{
-    width: 70px;
-    height: 70px;
-}
-
-
 h1{
     font-size: 20px;
 }
 h2{
     font-size: 30px;
-    margin-top: 40px;
 }
 h3{
     font-size: 10px;
@@ -54,4 +47,8 @@ h5{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.header_txt{
+    margin-top: 40px;
 }
