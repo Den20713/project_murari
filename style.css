@@ -11,10 +11,11 @@ body{
 
 
 header{
+    margin: 0 10PX 0 10PX;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 h1{
