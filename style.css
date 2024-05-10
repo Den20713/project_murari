@@ -1,13 +1,5 @@
-.row{
+header{
     display: flex;
     flex-direction: row;
 }
 
-main{
-    background-color: #00003A;
-}
-
-.header{
-    display: flex;
-    flex-direction: row;
-}
