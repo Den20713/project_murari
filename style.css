@@ -21,8 +21,8 @@ header{
 }
 footer{
     border-top: 1px solid white;
-    height: 100px;
-    margin: 100px;
+    
+    
 
 }
 
@@ -76,7 +76,9 @@ h5{
   align-self: center;
   justify-content: center;
 }
-
+#slider{
+  width: 100vw;
+}
 
 
 
@@ -120,6 +122,7 @@ h5{
 }
   
   body {
+    
     font-family: Helvetica, Arial, sans-serif; 
 }
   
@@ -203,14 +206,12 @@ h5{
     } }
   
   .slide {
-    overflow: hidden;
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 150vmax;
-    height: 150vmax;
+    width: 100vw;
+    height: 100vh;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
     transition: clip-path 0s 0.91s;
     clip-path: circle(30px at 120vw 50%); 
 }
