@@ -1,17 +1,33 @@
+/* так потрібно*/
 *{
     margin: 0;
     padding: 0;
     color:white;
     user-select: none;
 }
+/* так потрібно*/
 
-.in_body{
+
+/* заготовкі*/
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 25px;
+}
+h4{
+  font-size: 20px;
+}
+h5{
+  font-size: 10px;}
+body{
     background-color: black;
     
 }
-
-
-.in_header{
+header{
     margin: 0 10PX 0 10PX;
     display: flex;
     flex-direction: row;
@@ -19,79 +35,148 @@
     border-bottom: 1px solid white;
     height: 12vh;
 }
-.in_footer{
+footer{
     border-top: 1px solid white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     
-    
-
 }
-
-h1{
-    font-size: 40px;
-}
-h2{
-    font-size: 30px;
-}
-h3{
-    font-size: 25px;
-}
-h4{
-    font-size: 20px;
-}
-h5{
-    font-size: 10px;}
-
-.in_logo{
-    height: 10vh;
-    width: 10vh;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-}
-
-
-.in_slider{
-  height: 88vh
-}
-
-.in_cart_img{
-    height: 7vh;
-    width: 7vh;
-    
-}
-
-.in_header_txt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#in_text_cart{
+.center{
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-#in_logo{
+.logo{
   display: flex;
   align-self: center;
   justify-content: center;
+  height: 10vh;
+  width: 10vh;
 }
-#in_slider{
-  width: 100vw;
+.cart_img{
+  height: 7vh;
+  width: 7vh;
 }
+.header_txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+}
+.text_cart{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* заготовкі*/
+
+
+/* початкова сторінка(index)*/
+
+
 .in_element_in_footer{
-  margin: 10px;
+  margin: 5vh 0px;
 }
 .in_elements_in_footer{
-  margin: 10px;
+  margin: 0.5rem;
   margin-left: 2rem;
 }
 
 
 
+/* початкова сторінка(index)*/
+
+
+
+/*головна сторінка(main)*/
+
+
+
+
+
+
+
+.mn_slider{
+height: 88vh
+}
+
+
+
+
+#mn_text_cart{
+  display: flex;
+  align-items: center;
+}
+#mn_logo{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.mn_Title_F{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.mn_products{
+  margin:30px 30px 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.mn_product1{
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 310px;
+  height: 310px;
+  justify-content: center;
+}
+
+.mn_product2{
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 310px;
+  height: 310px;
+  justify-content: center;
+  margin-left: 257px;
+}
+
+.mn_product_img{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.mn_product1_img{
+  max-width: 300px;
+  border-radius: 20px;
+}
+
+.mn_price{
+  margin-top: 30px;
+}
+
+.mn_product3{
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 310px;
+  height: 310px;
+  justify-content: center;
+  margin-left: 257px;
+}
+
+/*головна сторінка(main)*/
+
+
+
+/*корзина(cart)*/
+
+
+
+/*корзина(cart)*/
 
 
 
@@ -120,10 +205,7 @@ h5{
 
 
 
-
-
-
-
+/*Слайдер НЕ ЧІПАТИ (працює і я хз як*/
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -289,4 +371,5 @@ h5{
       .slide__text a {
         color: inherit; 
     }
+/*Слайдер НЕ ЧІПАТИ (працює і я хз як*/
   

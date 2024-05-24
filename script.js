@@ -47,3 +47,22 @@
       }, slidingAT*0.75);
     };
   }());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let bill_buys=document.querySelector(".bill_buys").innerHTML; //приймаю кількість покупок
