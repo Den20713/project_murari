@@ -118,13 +118,34 @@ height: 88vh
 
 .mn_Title_F{
   text-align: center;
-  margin-top: 15px;
+  margin-top: 50px;
 }
 
 .mn_products{
-  margin:30px 30px 30px;
+  margin:100px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  grid-column: 30px;
+}
+
+.mn_line-1{
   display: flex;
   flex-direction: row;
+  grid-row: 257px;
+}
+
+.mn_line-2{
+  display: flex;
+  flex-direction: row;
+  grid-row: 257px;
+  margin-top: 70px;
+}
+
+.mn_line-3{
+  display: flex;
+  flex-direction: row;
+  grid-row: 257px;
+  margin-top: 70px;
 }
 
 .mn_product1{
@@ -151,7 +172,7 @@ height: 88vh
 }
 
 .mn_product1_img{
-  max-width: 300px;
+  max-width: 290px;
   border-radius: 20px;
 }
 
@@ -166,6 +187,23 @@ height: 88vh
   height: 310px;
   justify-content: center;
   margin-left: 257px;
+}
+
+.about_content{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.mn_add_to_cart{
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
 }
 
 /*головна сторінка(main)*/
