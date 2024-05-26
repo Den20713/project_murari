@@ -16,7 +16,7 @@ h2{
   font-size: 30px;
 }
 h3{
-  font-size: 25px;
+  font-size: 3vh;
 }
 h4{
   font-size: 20px;
@@ -70,7 +70,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
+.inRow{
+  display: flex;
+  flex-direction: row;
+}
 /* заготовкі*/
 
 
@@ -205,6 +208,72 @@ height: 88vh
   align-items: center;
   margin-left: 200px;
 }
+
+
+
+
+
+
+
+
+
+
+.mn_in_section{
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 100px;
+  margin: 40px;
+}
+.mn_wear_product{
+  border: white 4px solid;
+  border-radius: 20px;
+  width: 30vh;
+  height: 30vh;
+  display: flex;
+  align-items:flex-start ;
+  flex-direction: column;
+}
+.mn_wear_img{
+   display: flex;
+   align-items:flex-start ;
+}
+.mn_img_in_product{
+  height:14.625vh;
+  width: 26vh;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 2vh;
+  display: flex;
+  justify-self: center;
+}
+.mn_product_price{
+
+}
+.mn_product_about_car{
+
+}
+.mn_product_info{
+margin-left: 2vh;
+}
+.mn_product_buy{
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mn_product_in_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 26vh;
+  align-items: center;
+}
+
+
 
 /*головна сторінка(main)*/
 
