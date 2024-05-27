@@ -66,12 +66,14 @@
 
 let bill_buy=0
 let bill_buys=document.querySelector(".bill_buys")
-let add_to_bill_buy=document.querySelector(".mn_product_buy") 
+let add_to_bill_buy=document.querySelectorAll(".mn_product_buy") 
+
+bill_buys.textContent=bill_buy
 
 function plusOneBill_buys() {
-  bill_buy=bill_buy+1
-  bill_buys.textContent=bill_buy
-  console.log(bill_buys);
+    bill_buy=bill_buy+1
+    bill_buys.textContent=bill_buy
+    console.log(bill_buys);
 }
 
-add_to_bill_buy.addEventListener('click',plusOneBill_buys)
+add_to_bill_buy.forEach(button => button.addEventListener('click', plusOneBill_buys));
