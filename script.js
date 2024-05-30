@@ -87,6 +87,8 @@ add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_
 //очищення кошика
 let ca_clear_all= document.querySelector(".ca_clear_all")
 function clearCart() {
+  bill_buy=bill_buy-bill_buy
+  bill_buys.textContent=bill_buy
   console.log("clear")
   localStorage.clear();
 }
@@ -120,7 +122,13 @@ for (let i = 0; i <= 6; i++) {
     ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
 }
 
+//кнопка для перекидування з card на main 
 
+let ca_back_btn = document.querySelector(".ca_back_btn");
 
-
+  // Додаємо обробник події для кліку
+  ca_back_btn.addEventListener('click', function() {
+    // Змінюємо місцезнаходження браузера на main.html
+    window.location.href = 'main.html';
+  });
 

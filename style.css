@@ -313,7 +313,7 @@ margin-left: 2vh;
   margin: 20px;
 }
 
-.ca_div_clean_btn{
+.ca_div_clear_all{
   margin: 20px;
 }
 
@@ -338,6 +338,71 @@ margin-left: 2vh;
 .ca_back_btn:hover{
   background-color: white;
   color: black;
+}
+
+.ca_img_in_product{
+  height:22,49vh;
+  width: 40vh;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+  border: white 1px solid;
+  margin: 2vh;
+  display: flex;
+  justify-self: center;
+}
+
+.ca_wear_cars{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ca_inf{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.ca_img_txt{
+  margin-left: 125px;
+  margin-right: 200px;
+}
+
+.ca_name_txt{
+  margin-right: 125px;
+}
+
+.ca_price_txt{
+  margin-right: 125px;
+}
+
+.ca_car_inf{
+  display:flex;
+  flex-direction: row;
+}
+
+.ca_wear_table{
+  width: 1000px;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.buy_btn{
+  background-color: green;
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.buy_btn:hover{
+  background-color: white;
+  color: black;
+}
+
+.main{
+  display: flex;
 }
 /*корзина(cart)*/
 
