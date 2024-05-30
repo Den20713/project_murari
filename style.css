@@ -264,6 +264,7 @@ margin-left: 2vh;
   align-items: center;
   padding: 0.1rem 0.5rem;
   transition: all 0.3s ease;
+  margin-left: 5;
 }
 .mn_product_buy:hover{
   background-color: white;
@@ -277,11 +278,11 @@ margin-left: 2vh;
   align-items: center;
   margin: 0vh 2vh 2vh 2vh;
 }
-.
+
 .mn_table{
 
   border-collapse: separate;
-  border-spacing: 100px;
+  border-spacing: 1rem 0rem;
 }
 .mmn_table_in{
   margin: 2vh ;
@@ -294,7 +295,7 @@ margin-left: 2vh;
 
 }
 .mn_th{
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   text-align: left;
 }
 /*головна сторінка(main)*/
