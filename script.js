@@ -82,3 +82,45 @@ function plusOneBill_buys() {
 
 add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_buys));
 
+
+
+//очищення кошика
+let ca_clear_all= document.querySelector(".ca_clear_all")
+function clearCart() {
+  console.log("clear")
+  localStorage.clear();
+}
+ca_clear_all.addEventListener('click', clearCart)
+
+//Функція для збереження значень bills у LocalStorage
+function saveBills() {
+  localStorage.setItem('bills', JSON.stringify(bills));}
+// Функція для завантаження значень bills з LocalStorage
+function loadBills() {
+  let storedBills = localStorage.getItem('bills');
+  if (storedBills) {//можливо пізніше буде потрібно порівнювати довжини рядків
+      bills = JSON.parse(storedBills);
+  } else {
+      for (let i = 0; i < 6; i++) {
+          bills[i] = 0; 
+}}}
+length
+let bill_cars = [];
+let ca_wear_cars = [];
+let bills = [];
+
+for (let i = 0; i <= 6; i++) {
+    if (localStorage.getItem('bills[i]')){
+       bills[i]=Number(localStorage.getItem('bills[i]'))
+       console.log(bills[i])
+      }
+    else{bills[i] = 0}
+    
+    bill_cars[i] = document.querySelector(`.bill_car${i}`);
+    ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
+}
+
+
+
+
+
