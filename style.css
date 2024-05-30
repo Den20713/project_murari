@@ -280,7 +280,6 @@ margin-left: 2vh;
 }
 
 .mn_table{
-
   border-collapse: separate;
   border-spacing: 1rem 0rem;
 }
@@ -304,8 +303,42 @@ margin-left: 2vh;
 
 /*корзина(cart)*/
 
+.ca_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.ca_div_back_btn{
+  margin: 20px;
+}
 
+.ca_div_clean_btn{
+  margin: 20px;
+}
+
+.ca_clear_all{
+  display: flex;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.ca_clear_all:hover{
+  background-color: white;
+  color: black;
+}
+
+.ca_back_btn{
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.ca_back_btn:hover{
+  background-color: white;
+  color: black;
+}
 /*корзина(cart)*/
 
 
