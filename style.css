@@ -411,6 +411,7 @@ margin-left: 2vh;
   border: 2px solid white;
   border-radius: 10px;
   margin-right: 10px;
+  width: 30px;
 }
 
 .ca_min_bills{
@@ -418,6 +419,7 @@ margin-left: 2vh;
   border: 2px solid white;
   border-radius: 10px;
   margin-left: 10px;
+  width: 30px;
 }
 
 .ca_pl_bills:hover{
