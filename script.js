@@ -97,18 +97,7 @@ function clearCart() {
 }
 ca_clear_all.addEventListener('click', clearCart)
 
-//Функція для збереження значень bills у LocalStorage
-function saveBills() {
-  localStorage.setItem('bills', JSON.stringify(bills));}
-// Функція для завантаження значень bills з LocalStorage
-function loadBills() {
-  let storedBills = localStorage.getItem('bills');
-  if (storedBills) {//можливо пізніше буде потрібно порівнювати довжини рядків
-      bills = JSON.parse(storedBills);
-  } else {
-      for (let i = 0; i < 6; i++) {
-          bills[i] = 0; 
-}}}
+
 
 
 
@@ -131,7 +120,24 @@ for (let i = 0; i <= 6; i++) {
     ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
 */
 
-let 
+let ca_wear_cars = document.querySelector(".ca_wear_cars");
+let bill_cars = document.querySelector(".ca_bill_car");
+let add_to_cart = document.querySelector(".add_to_cart");
+let pl_bills = document.querySelector(".ca_pl_bills");
+let min_bills = document.querySelector(".ca_min_bills");
+
+pl_bills.addEventListener('click', function() {
+  bill_cars+=1
+  bill_cars.textContent=bill_cars
+  localStorage.setItem('bill_cars', bill_cars)
+})
+min_bills.addEventListener('click', function() {
+  bill_cars-=1
+  bill_cars.textContent=bill_cars
+  localStorage.setItem('bill_cars', bill_cars);
+})
+
+
 
 
 
