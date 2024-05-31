@@ -49,7 +49,11 @@
   }());
 
 
-
+//кнопка для перекидування з card на main 
+let ca_back_btn = document.querySelector(".ca_back_btn");
+  ca_back_btn.addEventListener('click', function() {
+    window.location.href = 'main.html';
+  });
 
 
 
@@ -87,8 +91,7 @@ add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_
 //очищення кошика
 let ca_clear_all= document.querySelector(".ca_clear_all")
 function clearCart() {
-  bill_buy=bill_buy-bill_buy
-  bill_buys.textContent=bill_buy
+  history.go(0);
   console.log("clear")
   localStorage.clear();
 }
@@ -106,10 +109,16 @@ function loadBills() {
       for (let i = 0; i < 6; i++) {
           bills[i] = 0; 
 }}}
-length
-let bill_cars = [];
-let ca_wear_cars = [];
-let bills = [];
+
+
+
+
+
+/*let bill_cars = [];
+let ca_wear_cars = document.querySelectorAll(".ca_wear_cars");
+let bills = document.querySelectorAll(".ca_bills");
+let pl_bills = document.querySelectorAll(".ca_pl_bills");
+let min_bills = document.querySelectorAll(".ca_min_bills");
 
 for (let i = 0; i <= 6; i++) {
     if (localStorage.getItem('bills[i]')){
@@ -120,15 +129,12 @@ for (let i = 0; i <= 6; i++) {
     
     bill_cars[i] = document.querySelector(`.bill_car${i}`);
     ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
-}
+*/
 
-//кнопка для перекидування з card на main 
+let 
 
-let ca_back_btn = document.querySelector(".ca_back_btn");
 
-  // Додаємо обробник події для кліку
-  ca_back_btn.addEventListener('click', function() {
-    // Змінюємо місцезнаходження браузера на main.html
-    window.location.href = 'main.html';
-  });
+
+
+
 
