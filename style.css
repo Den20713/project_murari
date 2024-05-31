@@ -377,13 +377,17 @@ margin-left: 2vh;
   margin-right: 125px;
 }
 
+.ca_num_txt{
+  margin-right: 125px;
+}
+
 .ca_car_inf{
   display:flex;
   flex-direction: row;
 }
 
 .ca_wear_table{
-  width: 1000px;
+  width: 1150px;
   border: 2px solid white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -398,6 +402,30 @@ margin-left: 2vh;
 }
 
 .buy_btn:hover{
+  background-color: white;
+  color: black;
+}
+
+.ca_pl_bills{
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.ca_min_bills{
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.ca_pl_bills:hover{
+  background-color: white;
+  color: black;
+}
+
+.ca_min_bills:hover{
   background-color: white;
   color: black;
 }
