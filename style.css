@@ -356,6 +356,11 @@ margin-left: 2vh;
   display: flex;
   flex-direction: row;
   align-items: center;
+  border: 2px solid white;
+  border-radius: 30px;
+  width: 870px;
+  margin-top: 10px;
+  margin-left: 12px;
 }
 
 .ca_inf{
@@ -387,7 +392,7 @@ margin-left: 2vh;
 }
 
 .ca_wear_table{
-  width: 1150px;
+  width: 900px;
   border: 2px solid white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -432,9 +437,16 @@ margin-left: 2vh;
   color: black;
 }
 
+.ca_total_price{
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
 .main{
   display: flex;
 }
+
 /*корзина(cart)*/
 
 
