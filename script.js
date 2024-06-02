@@ -220,39 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-/*let bill_cars = [];
-let ca_wear_cars = document.querySelectorAll(".ca_wear_cars");
-let bills = document.querySelectorAll(".ca_bills");
-let pl_bills = document.querySelectorAll(".ca_pl_bills");
-let min_bills = document.querySelectorAll(".ca_min_bills");
-
-for (let i = 0; i <= 6; i++) {
-    if (localStorage.getItem('bills[i]')){
-       bills[i]=Number(localStorage.getItem('bills[i]'))
-       console.log(bills[i])
-      }
-    else{bills[i] = 0}
-    
-    bill_cars[i] = document.querySelector(`.bill_car${i}`);
-    ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
-*/
-
-let ca_wear_cars = document.querySelector(".ca_wear_cars");
-let bill_cars = document.querySelector(".ca_bill_car");
-let add_to_cart = document.querySelector(".add_to_cart");
-let pl_bills = document.querySelector(".ca_pl_bills");
-let min_bills = document.querySelector(".ca_min_bills");
-
-pl_bills.addEventListener('click', function() {
-  bill_cars+=1
-  bill_cars.textContent=bill_cars
-  localStorage.setItem('bill_cars', bill_cars)
-})
-min_bills.addEventListener('click', function() {
-  bill_cars-=1
-  bill_cars.textContent=bill_cars
-  localStorage.setItem('bill_cars', bill_cars);
-})
 
 
 
