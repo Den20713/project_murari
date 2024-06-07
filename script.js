@@ -49,6 +49,11 @@
   }());
 
 
+//кнопка для перекидування з card на main 
+let ca_back_btn = document.querySelector(".ca_back_btn");
+  ca_back_btn.addEventListener('click', function() {
+    window.location.href = 'main.html';
+  });
 
 
 
@@ -59,12 +64,7 @@
 
 
 
-
-
-
-
-
-let bill_buy=0
+/*let bill_buy=0
 let bill_buys=document.querySelector(".bill_buys")
 let add_to_bill_buys=document.querySelectorAll(".mn_product_buy") 
 bill_buy = Number(localStorage.getItem('bill_buy'));
@@ -80,55 +80,151 @@ function plusOneBill_buys() {
     localStorage.setItem('bill_buy', bill_buy);
 }
 
-add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_buys));
+add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_buys));*/
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Отримуємо елементи DOM
+  var cartCounter = document.querySelector(".bill_buys"); // Елемент для відображення кількості товарів в кошику
+  var buyButtons = document.querySelectorAll(".mn_product_buy"); // Кнопки "Buy" на сторінці main
+
+  // Перевіряємо, чи існує значення в локальному сховищі, якщо ні - створюємо нове
+  if (!localStorage.getItem("cartCount")) {
+      localStorage.setItem("cartCount", "0");
+      cartCounter.textContent = "0";
+  } else {
+      // Відображаємо поточну кількість товарів у кошику
+      cartCounter.textContent = localStorage.getItem("cartCount");
+  }
+
+  // Додаємо обробник подій для кожної кнопки "Buy"
+  buyButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+          // Отримуємо поточне значення лічильника з локального сховища
+          var currentCount = parseInt(localStorage.getItem("cartCount"));
+
+          // Збільшуємо значення лічильника на 1
+          currentCount++;
+
+          // Зберігаємо нове значення лічильника в локальному сховищі
+          localStorage.setItem("cartCount", currentCount.toString());
+
+          // Оновлюємо відображення кількості товарів у кошику
+          cartCounter.textContent = currentCount.toString();
+      });
+  });
+});
+
 
 
 
 //очищення кошика
 let ca_clear_all= document.querySelector(".ca_clear_all")
 function clearCart() {
-  bill_buy=bill_buy-bill_buy
-  bill_buys.textContent=bill_buy
+  history.go(0);
   console.log("clear")
   localStorage.clear();
 }
 ca_clear_all.addEventListener('click', clearCart)
 
-//Функція для збереження значень bills у LocalStorage
-function saveBills() {
-  localStorage.setItem('bills', JSON.stringify(bills));}
-// Функція для завантаження значень bills з LocalStorage
-function loadBills() {
-  let storedBills = localStorage.getItem('bills');
-  if (storedBills) {//можливо пізніше буде потрібно порівнювати довжини рядків
-      bills = JSON.parse(storedBills);
-  } else {
-      for (let i = 0; i < 6; i++) {
-          bills[i] = 0; 
-}}}
-length
-let bill_cars = [];
-let ca_wear_cars = [];
-let bills = [];
 
-for (let i = 0; i <= 6; i++) {
-    if (localStorage.getItem('bills[i]')){
-       bills[i]=Number(localStorage.getItem('bills[i]'))
-       console.log(bills[i])
+
+//Код для кошика
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Ініціалізація кількості товарів у кошику
+  let bill_buy = Number(localStorage.getItem('bill_buy')) || 0;
+  const bill_buys = document.querySelector(".bill_buys");
+  const add_to_bill_buys = document.querySelectorAll(".mn_product_buy");
+
+  // Оновлення відображення кількості товарів у кошику
+  bill_buys.textContent = bill_buy;
+
+  // Функція для збільшення кількості товарів у кошику
+  function plusOneBill_buys() {
+      bill_buy += 1;
+      bill_buys.textContent = bill_buy;
+      localStorage.setItem('bill_buy', bill_buy);
+  }
+
+  // Додавання обробника подій для кнопок "Buy" на сторінці main.html
+  add_to_bill_buys.forEach(button => button.addEventListener('click', plusOneBill_buys));
+
+  // Обробка кнопок додавання/зменшення кількості товарів у кошику (на сторінці cart.html)
+  const plusButtons = document.querySelectorAll(".ca_pl_bills");
+  const minusButtons = document.querySelectorAll(".ca_min_bills");
+  const billElements = document.querySelectorAll(".ca_bills");
+
+  // Функція для оновлення загальної суми
+  function updateTotal() {
+      let total = 0;
+      billElements.forEach(bill => {
+          const priceElement = bill.parentNode.querySelector("h2:nth-of-type(2)");
+          const price = parseFloat(priceElement.textContent.replace(/[^\d.]/g, ''));
+          const quantity = Number(bill.textContent);
+          total += price * quantity;
+      });
+      document.querySelector(".ca_total_price").textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  // Функція для збільшення кількості товару
+  function incrementQuantity(event) {
+      const billElement = event.target.nextElementSibling;
+      let quantity = Number(billElement.textContent);
+      quantity += 1;
+      billElement.textContent = quantity;
+      updateTotal();
+  }
+
+  // Функція для зменшення кількості товару
+  function decrementQuantity(event) {
+      const billElement = event.target.previousElementSibling;
+      let quantity = Number(billElement.textContent);
+      if (quantity > 0) {
+          quantity -= 1;
+          billElement.textContent = quantity;
       }
-    else{bills[i] = 0}
-    
-    bill_cars[i] = document.querySelector(`.bill_car${i}`);
-    ca_wear_cars[i] = document.querySelector(`.ca_wear_car${i}`);
-}
+      updateTotal();
+  }
 
-//кнопка для перекидування з card на main 
+  // Додавання обробника подій для кнопок збільшення кількості товарів у кошику (на сторінці cart.html)
+  plusButtons.forEach(button => button.addEventListener('click', incrementQuantity));
 
-let ca_back_btn = document.querySelector(".ca_back_btn");
+  // Додавання обробника подій для кнопок зменшення кількості товарів у кошику (на сторінці cart.html)
+  minusButtons.forEach(button => button.addEventListener('click', decrementQuantity));
 
-  // Додаємо обробник події для кліку
-  ca_back_btn.addEventListener('click', function() {
-    // Змінюємо місцезнаходження браузера на main.html
-    window.location.href = 'main.html';
+  // Обробка кнопки "Clean products" для очищення кошика
+  document.querySelector(".ca_clear_all").addEventListener('click', () => {
+      billElements.forEach(bill => bill.textContent = '0');
+      updateTotal();
   });
+
+  // Обробка кнопки "Back to products"
+  document.querySelector(".ca_back_btn").addEventListener('click', () => {
+      window.location.href = 'main.html';
+  });
+
+  // Обробка кнопки "Buy"
+  document.querySelector(".buy_btn").addEventListener('click', () => {
+      alert('Purchase complete!');
+      billElements.forEach(bill => bill.textContent = '0');
+      updateTotal();
+      localStorage.removeItem('bill_buy');
+      bill_buys.textContent = '0';
+  });
+
+  // Оновлення загальної суми при завантаженні сторінки
+  updateTotal();
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
