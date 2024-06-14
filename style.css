@@ -449,6 +449,60 @@ margin-left: 2vh;
 
 /*корзина(cart)*/
 
+/*Сторінка about*/
+
+.Main_txt{
+  margin: 30px;
+}
+
+.about_txt{
+  margin-top:30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 30px;
+  height: 100px;
+}
+
+.Our_services_txt{
+  margin-top: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 30px;
+  height: 120px;
+}
+
+
+.Team{
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 30px;
+  height: 350px;
+}
+
+.interfase_txt{
+  margin-top: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 30px;
+  height: 100px;
+}
+
+.bohdan{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.denys{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.adri{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/*Сторінка about*/
 
 
 
